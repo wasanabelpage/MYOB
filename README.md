@@ -12,6 +12,7 @@ After running the console app - it allows to enter the functionality name with r
 
 
 ## Future Enhancements Proposed
+* Move Tax Bands to a database table - add a DataAccess Layer
 * Use of database to store Tax Bands
 * Use logger functionality to generate logs
 * Domain Modelling - use seperate DTO's for returning result instead of [PayrollResult.cs] shared DTO

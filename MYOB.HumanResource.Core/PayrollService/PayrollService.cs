@@ -50,7 +50,7 @@ namespace MYOB.HumanResource.Core.PayrollService
             else
             {
                 payrollResult.StatusCode = PayrollResultStatusCode.Success;
-                payrollResult.CalculatedAmount = IncomeTaxCalculation(incomeTaxRequest.AnnualSalary);
+                payrollResult.CalculatedAmount = TaxCalculation(incomeTaxRequest.AnnualSalary, typeof(IncomeTaxRequest));
             }
 
             return payrollResult;
@@ -85,18 +85,38 @@ namespace MYOB.HumanResource.Core.PayrollService
 
         #region Private Methods
 
-        private decimal IncomeTaxCalculation(decimal annualSalary)
+        /// <summary>
+        /// Can call this method to calc Tax for different tax bands
+        /// Open/Close Principle
+        /// </summary>
+        /// <param name="annualSalary"></param>
+        /// <param name="type"></param>
+        /// <returns></returns>
+        private decimal TaxCalculation(decimal annualSalary, Type type)
         {
             decimal taxAmount = 0m;
-            var taxBands = new[]  //Best approach would be to get from database table
-            {
-                new  { Lower =0m, Upper =20000m, RatePerDollar =0m},
-                new  { Lower =20000m, Upper =40000m, RatePerDollar =0.1m},
-                new  { Lower =40000m, Upper =80000m, RatePerDollar =0.2m},
-                new  { Lower =80000m, Upper =180000m, RatePerDollar =0.3m},
-                new  { Lower =180000m, Upper =decimal.MaxValue, RatePerDollar =0.4m}
-            };
+            dynamic taxBands = new { };
 
+            if (type == typeof(IncomeTaxRequest))  //Expandable to calculate tax for other request types
+            {
+                taxBands = new[]  //Best approach would be to get from database table - via a data access layer
+                {
+                    new  { Lower =0m, Upper =20000m, RatePerDollar =0m},
+                    new  { Lower =20000m, Upper =40000m, RatePerDollar =0.1m},
+                    new  { Lower =40000m, Upper =80000m, RatePerDollar =0.2m},
+                    new  { Lower =80000m, Upper =180000m, RatePerDollar =0.3m},
+                    new  { Lower =180000m, Upper =decimal.MaxValue, RatePerDollar =0.4m}
+                };
+            }
+            else if (type == typeof(GrossIncomeRequest)) // Future functionality of different tax calc bands within the service
+            {
+                throw new ArgumentNullException(type.Name);
+            }
+            else
+            {
+                throw new ArgumentNullException(type.Name);
+            }
+            
             foreach (var taxBand in taxBands)
             {
                 if (annualSalary > taxBand.Lower)
