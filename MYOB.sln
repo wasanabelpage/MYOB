@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1209
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MYOB.HumanResource", "MYOB.HumanResource\MYOB.HumanResource.csproj", "{239D2707-5856-4A01-AD0C-257F67B33FEC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MYOB.HumanResource.Core", "MYOB.HumanResource.Core\MYOB.HumanResource.Core.csproj", "{2F14E707-1165-4C96-A3BB-2992599B373F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MYOB.HumanResource.Core.Tests", "MYOB.HumanResource.Core.Tests\MYOB.HumanResource.Core.Tests.csproj", "{A9AB8796-09F6-417C-AAA5-C0503E2C6F78}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B0EE7B68-C8C0-4BF8-B931-591C9CC88F3F}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{239D2707-5856-4A01-AD0C-257F67B33FEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{239D2707-5856-4A01-AD0C-257F67B33FEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{239D2707-5856-4A01-AD0C-257F67B33FEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{239D2707-5856-4A01-AD0C-257F67B33FEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F14E707-1165-4C96-A3BB-2992599B373F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F14E707-1165-4C96-A3BB-2992599B373F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F14E707-1165-4C96-A3BB-2992599B373F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F14E707-1165-4C96-A3BB-2992599B373F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9AB8796-09F6-417C-AAA5-C0503E2C6F78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9AB8796-09F6-417C-AAA5-C0503E2C6F78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9AB8796-09F6-417C-AAA5-C0503E2C6F78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9AB8796-09F6-417C-AAA5-C0503E2C6F78}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {470E7AF7-4B44-4DB6-A059-B3F018C5DEF2}
+	EndGlobalSection
+EndGlobal

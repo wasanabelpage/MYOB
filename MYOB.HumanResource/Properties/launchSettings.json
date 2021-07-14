@@ -1,0 +1,7 @@
+{
+  "profiles": {
+    "MYOB.HumanResource": {
+      "commandName": "Project"
+    }
+  }
+}
