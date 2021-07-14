@@ -5,6 +5,9 @@ namespace MYOB.HumanResource.Core.PayrollService
 {
     public class PayrollService : IPayrollService
     {
+        /// <summary>
+        /// Calculate the Gross Monthly Income based on annual salary
+        /// </summary>
         public PayrollResult CalculateGrossMonthlyIncome(GrossIncomeRequest grossIncomeRequest)
         {
             //null request object
@@ -27,6 +30,9 @@ namespace MYOB.HumanResource.Core.PayrollService
             return payrollResult;
         }
 
+        /// <summary>
+        /// Calculate Income tax per month
+        /// </summary>
         public PayrollResult CalculateMonthlyIncomeTax(IncomeTaxRequest incomeTaxRequest)
         {
             //null request object
@@ -50,6 +56,9 @@ namespace MYOB.HumanResource.Core.PayrollService
             return payrollResult;
         }
 
+        /// <summary>
+        /// Calculate Net Monthly Income
+        /// </summary>
         public PayrollResult CalculateNetMonthlyIncome(NetIncomeRequest netIncomeRequest)
         {
             //null request object
