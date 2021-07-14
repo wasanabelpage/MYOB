@@ -70,6 +70,7 @@ Once Command Promt allows for the user input enter <function name> "<employee na
 
 ## How to execute Unit Tests
 * Open TestExplorer for the Visual Studio Windows
+* Build the solution
 * Run All Tests
 
 
