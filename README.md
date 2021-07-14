@@ -14,6 +14,8 @@ After running the console app - it allows to enter the functionality name with r
 ## Future Enhancements Proposed
 * Use of database to store Tax Bands
 * Use logger functionality to generate logs
+* Domain Modelling - use seperate DTO's for returning result instead of [PayrollResult.cs] shared DTO
+* Domain Modelling - Pass a Message field with more info when [PayrollResultStatusCode] is failed - (useful to display to a user interface)
 * Upgrate to handle and validate inputs arguments/parameters with a regex
 * Add a constraint to check if employee exists
 * Styling of console output to a table for better visual representation

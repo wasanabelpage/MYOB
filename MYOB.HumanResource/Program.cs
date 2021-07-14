@@ -108,6 +108,7 @@ namespace MYOB.HumanResource
                     var payrollNetIncomeResult = _payslipProcessor.CalculateNetMonthlyIncome(netIncomeRequest);
 
                     //Output
+                    Console.WriteLine("-----------------------------------------");
                     Console.WriteLine($"Monthly Payslip for \"{employeeName}\"");
                     Console.WriteLine($"Gross Monthly Income: { payrollGrossIncomeResult.CalculatedAmount:C} ");
                     Console.WriteLine($"Monthly Income Tax: { payrollIncomeTaxResult.CalculatedAmount:C} ");
